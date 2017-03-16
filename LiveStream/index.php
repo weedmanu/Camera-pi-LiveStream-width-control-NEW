@@ -23,11 +23,11 @@ $srv_addr = "http://${_SERVER['SERVER_ADDR']}:8080";
 	$host = "127.0.0.1";
 	$port = 9999;
 
-	$socket = socket_create(AF_INET, SOCK_STREAM,0) or die("Could not create socket\n");
+	$socket = socket_create(AF_INET, SOCK_STREAM,0) or die("Impossible de créer le socket\n");
 
 	socket_connect ($socket , $host,$port ) ;
 
-	socket_write($socket, $data, strlen ($data)) or die("Could not write data\n");
+	socket_write($socket, $data, strlen ($data)) or die("Impossible d'écrie des datas, le programme servocam.py doit être fermé !!!!'\n");
 
 	socket_close($socket) ;	
 

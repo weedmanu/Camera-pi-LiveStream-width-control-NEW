@@ -43,7 +43,7 @@
    <tr>
        <td>
 		    <p><form class="form" method="post" action="servo.php"> 		
-			<input type="hidden" name="com" value="2"><br>
+			<input type="hidden" name="com" value="1"><br>
 			<input type="image" src="img/fleche-gauche.png" alt="Submit" >
 			</form></p>
 		</td>
@@ -57,7 +57,7 @@
 		<td></td>
        <td>
 			<p><form class="form" method="post" action="servo.php"> 		
-			<input type="hidden" name="com" value="1"><br>
+			<input type="hidden" name="com" value="2"><br>
 			<input type="image" src="img/fleche-droite.png" alt="Submit" >
 			</form></p>
        </td>
