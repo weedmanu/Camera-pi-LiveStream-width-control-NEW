@@ -65,7 +65,7 @@ while True:
 						subprocess.call("sudo /var/www/html/LiveStream/prog/./photo.sh", shell=True)
 					
 	if data == '9':	
-		subprocess.call("./supp.sh", shell=True)		
+		subprocess.call("/var/www/html/LiveStream/prog/./supp.sh", shell=True)		
 
 
 
