@@ -1,0 +1,132 @@
+/* un peu de déco */
+header {
+	background-color: #AADDAA;
+	padding: 0.2em;
+	margin: 0.2em;
+	border-radius: 1em
+}
+
+
+footer {
+	background-color: #AADDAA;
+	padding: 0.2em;
+	margin: 0.2em;
+	border-radius: 1em
+}
+	
+.cam {
+	width:100%;
+	height:650px;
+	margin-top: 1em;	
+	border:none;
+	}
+	
+.element {
+    margin: auto;
+    text-align: center;   
+}
+
+
+#date {
+    margin:  auto;
+    text-align: center;
+    font-size : 2em;
+}
+
+#heure {
+    margin:  auto;
+    text-align: center;
+    font-size : 3em;        
+}
+
+
+.form {	
+	font-style: italic;	
+	font-weight: bold;	
+	text-align:center;
+	}
+	
+
+
+input#stop { 
+	background: #EF9090;
+	width:6em;
+	padding: 10px 10px; 
+	font-style: italic;
+	font-size: 1.2em;
+	font-weight: bold;
+	border:solid 1px black;
+	border-radius: 25pt;
+	
+}
+
+input#play { 
+	background: #EEEE98;
+	width:6em;
+	padding: 10px 10px; 
+	font-style: italic;
+	font-size: 1.2em;
+	font-weight: bold;
+	border:solid 1px black;
+	border-radius: 25pt;
+	
+}
+
+/*Ca nous intéresse à partir de là*/
+header, #content ,footer {
+	display: -webkit-box;
+	display: -moz-box;         
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;             /* déclaration flexbox suivant les navigateurs*/
+}
+
+/* On adapte les boites */
+main {
+	background-color: black ;
+	flex: 1; /* Force l'étirement */		
+	order: 2 ;/* position */
+	width:65%;
+	padding: 1em;
+	margin: 0.em;
+	border-radius: 1em
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	background-color: #E3ED9B;
+	order: 1; /* position */
+	width:20%;
+	padding: 1em;
+	margin: 0.em;
+	border-radius: 1em
+}
+
+aside {	
+	display: flex;
+	flex-direction: column;
+	background-color: #E3ED9B;
+	order: 3; /* position */
+	width:15%;
+	padding: 1em;
+	margin: 0.em;
+	border-radius: 1em	
+}
+	
+
+
+/* On force la taille de la page... et on modèle de boite global */
+html {
+	background-color: black;
+	display: flex;
+	flex-direction: column;  /* disposition */
+	height: 100%
+}
+
+
+/* et on s'arrange pour que le contenu (ligne 2) prenne toute la place */
+#content {
+	height: 80%
+}
+
