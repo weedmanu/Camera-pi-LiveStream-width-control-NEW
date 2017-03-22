@@ -6,7 +6,6 @@ header {
 	border-radius: 1em
 }
 
-
 footer {
 	background-color: #AADDAA;
 	padding: 0.2em;
@@ -26,7 +25,6 @@ footer {
     text-align: center;   
 }
 
-
 #date {
     margin:  auto;
     text-align: center;
@@ -39,14 +37,11 @@ footer {
     font-size : 3em;        
 }
 
-
 .form {	
 	font-style: italic;	
 	font-weight: bold;	
 	text-align:center;
-	}
-	
-
+}
 
 input#stop { 
 	background: #EF9090;
@@ -56,8 +51,7 @@ input#stop {
 	font-size: 1.2em;
 	font-weight: bold;
 	border:solid 1px black;
-	border-radius: 25pt;
-	
+	border-radius: 25pt;	
 }
 
 input#play { 
@@ -68,12 +62,11 @@ input#play {
 	font-size: 1.2em;
 	font-weight: bold;
 	border:solid 1px black;
-	border-radius: 25pt;
-	
+	border-radius: 25pt;	
 }
 
-/*Ca nous intéresse à partir de là*/
-header, #content ,footer {
+/* disposition avec des flexbox */
+html, header, #content ,footer {
 	display: -webkit-box;
 	display: -moz-box;         
 	display: -ms-flexbox;
@@ -82,6 +75,12 @@ header, #content ,footer {
 }
 
 /* On adapte les boites */
+html {
+	background-color: black;	
+	flex-direction: column;  /* disposition */
+	height: 100%
+}
+
 main {
 	background-color: black ;
 	flex: 1; /* Force l'étirement */		
@@ -113,19 +112,7 @@ aside {
 	margin: 0.em;
 	border-radius: 1em	
 }
-	
 
-
-/* On force la taille de la page... et on modèle de boite global */
-html {
-	background-color: black;
-	display: flex;
-	flex-direction: column;  /* disposition */
-	height: 100%
-}
-
-
-/* et on s'arrange pour que le contenu (ligne 2) prenne toute la place */
 #content {
 	height: 80%
 }
