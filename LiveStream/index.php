@@ -37,6 +37,7 @@ $srv_addr = "http://${_SERVER['SERVER_ADDR']}:8080";
 		$affiche = "";	
 		$affiche2 = "";
 	}
+
 	// on ferme ce socket
 	socket_close($socket) ;
 }
