@@ -18,7 +18,11 @@ if (whiptail --title "Installation" --yesno "voulez vous lancer l'installation ?
 	printf "%b\n" "${BLUE}     *************************************************\n     *   installation des librairie nécessaire à mjpg-streamer  *\n     *************************************************${NC}\n"
 	echo ""
 	printf "%b\n" "${CYAN}"
+<<<<<<< HEAD
 	apt-get install apt-transport-https -y
+=======
+	apt-get install apt-transport-https
+>>>>>>> 83115d58100de3f09cf3c00d922a7c12ed010d16
 	echo ""
 	apt-get install subversion libjpeg8-dev imagemagick libv4l-dev -y
 	echo ""
@@ -37,7 +41,11 @@ if (whiptail --title "Installation" --yesno "voulez vous lancer l'installation ?
 	cd /home/pi
 	rm -r /home/pi/code
 	cp /usr/local/www/stream_simple.html /usr/local/www/cam.html
+<<<<<<< HEAD
 	printf "%b\n" "${BLUE}     *****************************************************************\n     *   installation de git et des outils python.'   *\n     *****************************************************************${NC}\n"
+=======
+	printf "%b\n" "${BLUE}     *****************************************************************\n     *   installation d' apache de git et des outils python.'   *\n     *****************************************************************${NC}\n"
+>>>>>>> 83115d58100de3f09cf3c00d922a7c12ed010d16
 	echo ""
 	printf "%b\n" "${CYAN}"
 	cd /home/pi
@@ -45,6 +53,7 @@ if (whiptail --title "Installation" --yesno "voulez vous lancer l'installation ?
 	echo ""
 	pip install psutil && sudo pip install pyserial
 	echo ""
+<<<<<<< HEAD
 	printf "%b\n" "${BLUE}     *****************************************************************\n     *   installation d' apache.'   *\n     *****************************************************************${NC}\n"
 	echo ""
 	printf "%b\n" "${CYAN}"
@@ -53,6 +62,11 @@ if (whiptail --title "Installation" --yesno "voulez vous lancer l'installation ?
 	rm index.html
 	sudo chown www-data:pi /var/www/html/
 	sudo chmod 770 /var/www/html/
+=======
+	apt-get install apache2 php5 libapache2-mod-php5 php5-mysql -y
+	cd /var/www/html/
+	rm index.html
+>>>>>>> 83115d58100de3f09cf3c00d922a7c12ed010d16
 	cd /home/pi
 	printf "%b\n" "${BLUE}     *****************************************************************\n     *   installation du  su site web.'   *\n     *****************************************************************${NC}\n"
 	echo ""
@@ -105,9 +119,23 @@ if (whiptail --title "Installation" --yesno "voulez vous lancer l'installation ?
 	printf "%b\n" "${GREEN}powered ${YELLOW}by ${RED}weedmanu${NC}\n"
 	echo ""
 	printf "%b\n" "${RED}Un reboot est recommandé${NC}\n"
+<<<<<<< HEAD
 	echo ""	
 else
 	whiptail --title "Installation" --msgbox "Installation annulée !!!" 10 60
 fi
 echo "bye-bye"
 exit
+=======
+	echo ""
+	if (whiptail --title "Installation" --yesno "voulez-vous le faire maintenant ? ?" --yes-button "oui" --no-button "non" 10 60) then
+		reboot
+	else
+		whiptail --title "Installation" --msgbox "reboot annulée !!!" 10 60
+	fi	
+else
+	whiptail --title "Installation" --msgbox "Installation annulée !!!" 10 60
+fi
+exit
+
+>>>>>>> 83115d58100de3f09cf3c00d922a7c12ed010d16

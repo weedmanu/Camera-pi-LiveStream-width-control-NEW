@@ -1,33 +1,26 @@
 <?php    
-
- // Si le tableau $_POST existe alors le formulaire a été envoyé
+ // Si on click sur un logo du panneau de commande (flêches et bouton home)
   if(!empty($_POST))  {
-	
+	// on met la valeur reçu du bouton dans une variable ( 1 à 5)
     $data = $_POST['com'];
-	
+	//	 adresse ip du serveur (sevocam.py)
 	$host = "127.0.0.1";
+	 //	 port du serveur (sevocam.py)
 	$port = 9999;
-
+	// création du socket
 	$socket = socket_create(AF_INET, SOCK_STREAM,0) or die("Could not create socket\n");
-
+	// ouverture de la connection
 	socket_connect ($socket , $host,$port ) ;
-
+	// envoi la variable data par le socket au serveur (servocam.py)
 	socket_write($socket, $data, strlen ($data)) or die("Could not write data\n");
-
+	// on ferme ce socket
 	socket_close($socket) ;	
-
 	}
-
-?>
-
+echo '
 <br/>
-
 <h3>Panneau de commande</h3>
-
 <br/>
-
 <table id="table">    
-
    <tr>
        <td></td>
        <td></td>
@@ -60,8 +53,7 @@
 			<input type="hidden" name="com" value="2"><br>
 			<input type="image" src="img/fleche-droite.png" alt="Submit" >
 			</form></p>
-       </td>
-       
+       </td>       
    </tr>
       <tr>
        <td></td>
@@ -75,7 +67,6 @@
        <td></td>
        <td></td>
    </tr> 
-
-
 </table>
-   
+';
+?>
